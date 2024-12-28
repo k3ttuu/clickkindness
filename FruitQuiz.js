@@ -1,106 +1,106 @@
 function displayQuiz() {
     const questions = [
         {
-            question: "You've been mysteriously invited to an unfamiliar realm known as Fruitville, accessible only within your dreams. The invitation expires tonight.",
-            choices: ["I don't know, seems risky", "Sounds fun, let's go on an adventure"],
+            question: "You're thinking about volunteering for the first time. What excites you most?",
+            choices: ["Helping people in need and making a real difference.", "Trying something new and meeting new people."],
             weights: [
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for first choice
                 {perceivingScore: +1, judgingScore:0 }, // Weight for second choice
             ]
         },
         {
-            question: "You drift into a deep slumber after a long day. All of a sudden, the sweet scent of fruits start to fill the air.",
-            choices: ["Where is the smell coming from?", "Am I in Fruitville"],
+            question: "You're looking at different volunteer opportunities on Google. What appeals to you most?",
+            choices: ["A one-time event where you can make an immediate impact.", "A long-term commitment where you can build relationships."],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 }, // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } // Weight for second choice
             ]
         },
         {
-            question: "You open your eyes and see that you’re in Fruitville. It’s a sunny morning in Fruitville and fruits are getting ready to start their day. An apple approaches you...",
-            choices: ["This is crazy, I’m dreaming for sure!", "I wonder if there will be any new fruits"],
+            question: "There's so many different opportunities available! But hmm... what motivates you most when considering a volunteer opportunity?",
+            choices: ["The opportunity to make a tangible difference in the community.", "The chance to gain new experiences and meet new people."],
             weights: [
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "The apple introduces itself as the Mayor of Fruitville.  “Will you be joining us for the FruitFest at noon? It’s an event meant to welcome newcomers and tourists. And yes, there will be plenty of food!",
-            choices: ["“Of course!”", "“I’ll think about it..”"],
+            question: "You realize that you can support a cause not only with your time, but also with your financial resources. Would you rather:",
+            choices: ["Donate to a cause you believe in.", "Volunteer your time directly."],
             weights: [
                 {perceivingScore: +1, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for second choice
             ]
         },
         {
-            question: "As you finish your conversation with the Mayor, you can't help but wonder..",
-            choices: ["What food will there be?", "Do fruits eat fruits?"],
+            question: "You asked a friend of yours to join you in your volunteering journey! He / she suggested to go for a sharing outreach event",
+            choices: ["Sure! That sounds like fun!", "Nah.. I'm not comfortable around big groups of people yet!"],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"While wandering Fruitville, you notice nobody questioning a human among the fruits. Looking down, you see your limbs, but realize fruits also have their own…",
-            choices: ["Am I still a human?", "Am I a fruit?"],
+            question:"You find something you're interested in! But it's a volunteering opportunity requires a lot of time and effort. Do you:",
+            choices: ["Feel challenged and excited to take it on.", "Feel overwhelmed and look for something less demanding."],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 } , // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"As you stroll along,  your stomach starts to rumble. At that moment, the town clock rings for noon and you decide to head for the FruitFest",
-            choices: ["I’ll make sure to bring some cash for the food stalls", "I can’t wait to explore the culture of Fruitville"],
+            question:"Ding! A notification popped up! A neighbor asks you to tutor their child. Do you:",
+            choices: ["Offer to help, even if it means adjusting your schedule", " Explain that you're not confident in your tutoring someone"],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for intuition 
             ]
         },
         {
-            question:"You’ve enjoyed your time at the FruitFest, but your time at Fruitville is coming to an end. How do you want to spend your last few minutes at Fruitville?",
-            choices: ["I need some time alone to process", "I want to socialize and make the most of my visit"],
+            question:"Well, that was a lot of research done for the day!",
+            choices: ["Time to relax!", "Hopefully I can find something I'm passionate about soon...t"],
             weights: [
                 {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
                 {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"As you prepare to leave Fruitville, the Mayor expresses gratitude for visiting and tells you that your FruitCard will arrive in the mail soon.",
-            choices: ["Finally! That was a strange experience", "Was I a fruit the entire time? I feel so confused"],
+            question:"You hop onto social media, and you come across a social media post about a local charity event. Do you:",
+            choices: ["Share the post with your network and encourage others to attend or donate", "Simply like the post and move on"],
             weights: [
                 {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
                 {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"While you slowly drift back to reality, memories of your time in Fruitville flood your mind.",
-            choices: ["I can’t stop thinking about the details of what happened", "I feel bittersweet and reminisce about my experience"],
+            question:"As you scroll on social media, you also learn about an important social issue. Do you:",
+            choices: ["Research the issue further and share information with your friends and family.", "Acknowledge the issue but not take any further action."],
             weights: [
                 {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
                 {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"You awaken from your nap on the couch and see that it’s almost time for dinner. Just then, you get a message from a friend asking you to join them for dinner.",
-            choices: ["Let’s go! I need to tell a friend about my dream", "Have dinner at home and relax instead"],
+            question:"Still not knowing what to do, you asked your parents for advice. Who's advice resonates with you more?",
+            choices: ["Mum: Start small and find something you're passionate about.", "Dad: Use your strengths to find a volunteer role where you can truly make a difference."],
             weights: [
                 {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
                 {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"The next day you hear a ring at your door, your FruitCard has arrived with a letter that says I’m welcome to visit again.",
-            choices: ["I’m already ready to visit again!", "I’ll think about visiting again"],
+            question:"As you was falling asleep, you wondered: If I had a superpower to help me volunteer, what would it be?",
+            choices: ["The ability to effortlessly connect with people from all walks of life.", "The ability to multiply yourself to volunteer at multiple places simultaneously."],
             weights: [
                 {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "Processing your FruitCard...",
-            choices: ["Collect my Fruitcard!"],
+            question: "Processing...",
+            choices: ["Find out what volunteering opportunities suit me!"],
             weights: [
-                {extrovertScore: 0, introvertScore: 0 }, // laceholder
+                {extrovertScore: 0, introvertScore: 0 }, // Placeholder
                 {introvertScore: 0, extrovertScore: 0}, //Placeholder
             ]
         },
@@ -121,18 +121,18 @@ function displayQuiz() {
 
     function displayQuestionImage(questionIndex) {
         const imageURLs = [
-            "Q1.png",
-            "Q2.png",
-            "Q3.png",
-            "Q4.png",
-            "Q5.png",
-            "Q6.png",
-            "Q7.png",
-            "Q8.png",
-            "Q9.png",
-            "Q10.png",
-            "Q11.png",
-            "Q12.png",
+            "qn 1.png",
+            "qn 2.png",
+            "qn 3.png",
+            "qn 4.png",
+            "qn 5.png",
+            "qn 6.png",
+            "qn 7.png",
+            "qn 8.png",
+            "qn 9.png",
+            "qn 10.png",
+            "qn 11.png",
+            "qn 12.png",
             "processing.GIF",
         ];
         const questionImageElement = document.getElementById('question-image');
@@ -252,7 +252,7 @@ function displayQuiz() {
         const questionElement = document.getElementById('question');
         const choiceContainers = document.getElementById('choices');
         const quizContainer = document.getElementById('quiz');
-        const thumbnailImage = document.querySelector('img[src="Thumbnail.gif"]');
+        const thumbnailImage = document.querySelector('img[src="front page.png"]');
         questionElement.remove();
         choiceContainers.remove();
         quizContainer.remove();
@@ -266,22 +266,22 @@ function displayQuiz() {
     //Function to calculate MBTI type and return image URL 
         function getMBTIImageUrl(mbtiTypeString) {
             const MBTIImageUrls = {
-                "ENTJ": "Lemon.png",
-                "INTJ": "Pomegranate.png", 
-                "ENTP": "Dragon Fruit.png",
-                "INTP": "Grape.png",
-                "ENFJ": "Peach.png",
-                "INFJ": "Fig.png",
-                "ENFP": "Watermelon.png",
-                "INFP": "Cherry.png",
-                "ESFJ": "Orange.png",
-                "ISFJ": "Apple.png",
-                "ESTJ": "Banana.png",
-                "ISTJ": "Pear.png",
-                "ESTP": "Pineapple.png",
-                "ISTP": "Coconut.png",
-                "ESFP": "Mango.png",
-                "ISFP": "Strawberry.png",
+                "ENTJ": "new long term.png",
+                "INTJ": "new quick fixer.png", 
+                "ENTP": "new social savvy.png",
+                "INTP": "new tutor.png",
+                "ENFJ": "new yapper.png",
+                "INFJ": "new long term.png",
+                "ENFP": "new quick fixer.png",
+                "INFP": "new social savvy.png",
+                "ESFJ": "new tutor.png",
+                "ISFJ": "new yapper.png",
+                "ESTJ": "new long term.png",
+                "ISTJ": "new quick fixer.png",
+                "ESTP": "new social savvy.png",
+                "ISTP": "new tutor.png",
+                "ESFP": "new yapper.png",
+                "ISFP": "new yapper.png",
             };
             return MBTIImageUrls[mbtiTypeString] || ""
         }
