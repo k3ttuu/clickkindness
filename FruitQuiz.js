@@ -58,7 +58,7 @@ function displayQuiz() {
         },
         {
             question:"Well, that was a lot of research done for the day!",
-            choices: ["Time to relax!", "Hopefully I can find something I'm passionate about soon...t"],
+            choices: ["Time to relax!", "Hopefully I can find something I'm passionate about soon..."],
             weights: [
                 {tutor: +0, social:0 } , // Weight for first choice
                 {tutor: +0, social:0} , // Weight for second choice
@@ -263,10 +263,10 @@ function displayQuiz() {
                 "LSY": "new yapper.png",
                 "LTT": "new tutor.png",
                 "LTY": "new long term.png",
-                "FST": "new fixer.png",
+                "FST": "new quick fixer.png",
                 "FSY": "new social savvy.png",
                 "FTT": "new tutor.png",
-                "FTY": "new social savvy.png"
+                "FTY": "new quick fixer.png"
             };
             return MBTIImageUrls[mbtiTypeString] || ""
         }
