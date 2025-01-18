@@ -50,7 +50,7 @@ function displayQuiz() {
         },
         {
             question:"Ding! A notification popped up! A neighbor asks you to tutor their child. Do you:",
-            choices: ["Offer to help, even if it means adjusting your schedule", " Explain that you're not confident in your tutoring someone"],
+            choices: ["Offer to help, even if it means adjusting your schedule", " Explain that you're not confident in tutoring someone"],
             weights: [
                 {tutor: +2, social:0} , // Weight for first choice
                 {tutor: +0, social:0 } , // Weight for intuition 
