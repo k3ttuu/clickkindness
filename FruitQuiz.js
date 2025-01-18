@@ -13,7 +13,7 @@ function displayQuiz() {
             choices: ["A one-time event where you can make an immediate impact.", "A long-term commitment where you can build relationships."],
             weights: [
                 {fixer: +1, longterm: 0 }, // Weight for first choice
-                {ixer: +0, longterm: 1  } // Weight for second choice
+                {fixer: +0, longterm: 1  } // Weight for second choice
             ]
         },
         {
@@ -261,7 +261,7 @@ function displayQuiz() {
             const MBTIImageUrls = {
                 "LST": "new long term.png",
                 "LSY": "new yapper.png",
-                "LTT": "new tutor.png",
+                "LTT": "new long term.png",
                 "LTY": "new long term.png",
                 "FST": "new quick fixer.png",
                 "FSY": "new social savvy.png",
